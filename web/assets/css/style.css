@@ -1,0 +1,710 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* DEBUT HEADER */
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#8fa2a9;
+}
+
+.logo{
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+.grand-menu {
+    background-image: url("../img/villes/paris-fond2.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative
+}
+
+.menu{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    justify-content: space-between;
+    align-items: center;
+    margin-right : 20px;
+    
+}
+
+.menu a:hover {
+    color: #e57c71;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 25px;
+    border: none;
+    padding-bottom: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropbtn {
+    color: #e57c71;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* FIN HEADER */
+
+/* DEBUT HOME */
+
+.intro {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    padding-top: 22%;
+    color: black
+}
+
+.arrow{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+/* DEBUT TABLEAU IMG*/
+
+.content_page1 {
+    width: 100%;
+    background-color: #8fa2a9;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+/* DEBUT ADVICE YOAN*/
+
+.advice_yoan {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 65%;
+}
+
+.title_yoan {
+    display: flex;
+}
+
+.round_img_yoan {
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:15%;
+    height:15%;
+}
+
+.name {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+}
+
+.subtitle {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+.content_advice_yoan {
+    width: 90%;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.tab_img_paris {
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+/* FIN ADVICE YOAN*/
+
+/* DEBUT ADVICE CORINNE*/
+
+.advice_corinne {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.title_corinne {
+    display: flex;
+}
+
+.round_img_corinne {
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:6%;
+    height:15%;
+}
+
+.content_advice_corinne {
+    width: 40%;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.tab_img_amsterdam {
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+/* FIN ADVICE CORINNE*/
+
+/* DEBUT ADVICE VICTOR*/
+
+.advice_victor {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 65%;
+    margin-top: 30%;
+}
+
+.title_victor {
+    display: flex;
+}
+
+.round_img_victor {
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:15%;
+    height:15%;
+}
+
+.content_advice_victor {
+    width: 90%;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.tab_img_prague {
+    width: 100%;
+}
+
+/* FIN ADVICE VICTOR*/
+
+/* FIN TABLEAU IMG*/
+
+/* DEBUT ÉTAPES*/
+
+.content_step {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #8fa2a9;
+}
+
+.step {
+    text-align: center;
+}
+
+.img_step {
+    width: 90px;
+    text-align: center;
+    align-items: center;
+}
+
+.text_step {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Lobster', cursive;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.text_step:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+
+/* FIN ÉTAPES*/
+
+/* FIN HOME */
+
+/* DEBUT EUROPE */
+
+.content_page2 {
+    width: 100%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    background: #8fa2a9;
+}
+
+/* DEBUT PARIS */
+
+.all_paris {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.paris {
+    width: 30%;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 7%;
+    text-align: justify;
+}
+
+.img_paris {
+    width: 80%;
+}
+
+/* FIN PARIS */
+
+/* DEBUT AMSTERDAM */
+
+.all_amsterdam {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.amsterdam {
+    width: 30%;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 4%;
+    text-align: justify;
+}
+
+.img_amsterdam {
+    width: 80%;
+    height: 100%;
+}
+
+/* FIN AMSTERDAM */
+
+/* DEBUT PRAGUE */
+
+.all_prague {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.prague {
+    width: 30%;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 30%;
+    text-align: justify;
+}
+
+.img_prague {
+    width: 80%;
+    height: 100%;
+}
+
+/* FIN PRAGUE */
+
+/* DEBUT SEVILLE */
+
+.all_seville {
+    width: 100%;
+    align-items: center;
+    text-align: center
+}
+
+.seville {
+    width: 30%;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 3%;
+    text-align: justify;
+}
+
+.img_seville {
+    width: 80%;
+    height: 100%;
+}
+
+/* FIN SEVILLE */
+
+.read_more {
+    color : #e57c71
+}
+
+/* FIN EUROPE */
+
+/* DEBUT CONNECT */
+
+/* DEBUT LOGIN */
+
+.login {
+    text-align: -webkit-center;
+}
+
+label {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.signin {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: black;
+    padding-top: 5%;
+}
+
+.signin:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+/* FIN LOGIN */
+
+/* DEBUT REGISTER */
+
+.form-control {
+    width: 50%;
+}
+
+.form-group {
+    text-align: -webkit-center;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    margin-top: 5%;
+}
+
+
+.register {
+    text-align: center;
+    align-content: center;
+    padding-bottom: 1%;
+}
+
+/* FIN REGISTER */
+
+.validate {
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+}
+
+.validate:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+.confirmed {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.back {
+    color: black;
+}
+
+.back:hover {
+    color: #e57c71;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* FIN CONNECT */
+
+
+
+/* DEBUT CREATE DESTINATION */
+
+.form-destination {
+    text-align: -webkit-center;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+/* FIN CREATE DESTINATION */
+
+/* DEBUT CREATE CITY */
+
+.form-city {
+    text-align: -webkit-center;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.label-img {
+    margin-top: 5%;
+}
+
+.form-gogole {
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #e57c71;
+    border-color: #e57c71;
+}
+
+.city {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 9%;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+    color: black;
+}
+
+.img_city {
+    width: 100%;
+}
+
+/* FIN CREATE CITY */
+
+/* DEBUT CREATE CIRCUIT */
+
+.comment_stars {
+    font-size: 20px;
+}
+
+.circuit {
+    font-family: 'Lobster', cursive;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 9%;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    padding-bottom: 4%;
+}
+
+.description {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    padding-bottom: 4%;
+}
+
+.act {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    padding-bottom: 4%;
+}
+
+.duration {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    padding-bottom: 4%;
+}
+
+.distance {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    padding-bottom: 4%;
+}
+
+.price {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+/* FIN CREATE CIRCUIT */
+
+/* DEBUT HOME ADMIN */
+
+.content_admin {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20%;
+}
+
+.modif {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: black;
+}
+
+.modif:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+.add {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.add:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+.delete {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: black;
+}
+
+.delete:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+.update {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: black;
+}
+
+.update:hover {
+    color: #e57c71;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+
+
+
+
+/* FIN HOME ADMIN */
+
+
+.send {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+
+.yes_no {
+    display: flex;  
+    justify-content: space-between;
+}
+
+
+
+
+

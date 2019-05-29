@@ -1,0 +1,24 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block content %}
+    {{ form_start(formCreateCity) }}
+        <div class="form-city">
+            <div class="form-group">
+                {{ form_label(formCreateCity.name) }}
+                {{ form_errors(formCreateCity.name) }}
+                {{ form_widget(formCreateCity.name) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCity.destinations) }}
+                {{ form_errors(formCreateCity.destinations) }}
+                {{ form_widget(formCreateCity.destinations) }}
+            </div>
+            <div class="label-img">
+                {{ form_label(formCreateCity.image) }}
+            </div>
+            <div class="form-gogole">
+                {{ form_errors(formCreateCity.image) }}
+                {{ form_widget(formCreateCity.image) }}
+            </div>
+        </div>
+    {{ form_end(formCreateCity) }}
+{% endblock %}

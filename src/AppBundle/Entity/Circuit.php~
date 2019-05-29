@@ -1,0 +1,108 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Circuit
+ *
+ * @ORM\Table(name="circuit")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CircuitRepository")
+ */
+class Circuit
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="act1", type="string", length=255)
+     */
+    private $act1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="act2", type="string", length=255, nullable=true)
+     */
+    private $act2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="act3", type="string", length=255, nullable=true)
+     */
+    private $act3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="act4", type="string", length=255, nullable=true)
+     */
+    private $act4;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="act5", type="string", length=255, nullable=true)
+     */
+    private $act5;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="duration", type="string", length=255, nullable=true)
+     */
+    private $duration;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="distance", type="string", length=255)
+     */
+    private $distance;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="price", type="integer")
+     */
+    private $price;
+
+    /**
+     * @var string
+     * 
+     * @ORM\Column(name="document", type="string", length=255)
+     */
+    private $document;
+
+    /**
+     * Many circuit have one city. This is the owning side.
+     * @ORM\ManyToOne(targetEntity="City", inversedBy="circuits")
+     * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
+     */
+    private $cities;
+    
+}

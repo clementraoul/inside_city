@@ -1,0 +1,12 @@
+{% extends "baseAdmin.html.twig" %}
+
+{% block content %}
+<div class="content_admin">
+    <div class="all_home">
+        <a class="modif" href="{{ path('admin_city') }}">Ajouter, modifier ou supprimer une ville</a>
+    </div>
+    <div class="all_home">
+        <a class="modif" href="{{ path('admin_circuit') }}">Ajouter, modifier ou supprimer un circuit</a>
+    </div>
+</div>
+{% endblock %}

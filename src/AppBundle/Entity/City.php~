@@ -1,0 +1,52 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * City
+ *
+ * @ORM\Table(name="city")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CityRepository")
+ */
+class City
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, unique=true)
+     */
+    private $image;
+
+     /**
+     * Many destination have one city. This is the owning side.
+     * @ORM\ManyToOne(targetEntity="Destination", inversedBy="cities")
+     * @ORM\JoinColumn(name="destination_id", referencedColumnName="id")
+     */
+    private $destinations;
+
+    /**
+     * One city has many circuit. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Circuit", mappedBy="cities")
+     */
+    private $circuits;
+
+}
+

@@ -1,0 +1,36 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block content %}
+    <a class="add" href="{{ path('form_create_circuit') }}">
+        <p class="add">Ajouter un circuit</p> 
+    </a>
+    {% for circuit in circuits %}
+        <div class="circuit">
+            <h1 class="title">{{ circuit.title }}</h1>
+            <h2>Description</h2>
+            <p class="description">{{ circuit.description}}</p>
+            <h2>Activité 1</h2>
+            <p class="act">{{ circuit.act1}}</p>
+            <h2>Activité 2</h2>
+            <p class="act">{{ circuit.act2}}</p>
+            <h2>Activité 3</h2>
+            <p class="act">{{ circuit.act3}}</p>
+            <h2>Activité 4</h2>
+            <p class="act">{{ circuit.act4}}</p>
+            <h2>Activité 5</h2>
+            <p class="act">{{ circuit.act5}}</p>
+            <h2>Durée</h2>
+            <p class="duration">{{circuit.duration}}</p>
+            <h2>Distance</h2>
+            <p class="distance">{{circuit.distance}}</p>
+            <h2>Prix</h2>
+            <p class="price">{{circuit.price}}</p>
+            <a class="delete" href="{{ path('delete_circuit', {'id' : circuit.id})}}">
+            Supprimer 
+            </a>
+            <a class="update" href="{{ path('update_form_circuit', {'id' : circuit.id})}}">
+            Modifier
+            </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

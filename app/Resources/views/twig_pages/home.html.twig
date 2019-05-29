@@ -1,0 +1,65 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div id="bas">
+        <div class="content_page1">
+            <div class="tab_img1">
+                <div class="advice_yoan">
+                    <div class="title_yoan">
+                        <h1 class="name">Yoan D.</h1>
+                        <img class="round_img_yoan" src="{{ asset('assets/img/profils/yoan.jpg') }}" alt="Yoan">
+                    </div>
+                        <h2 class="subtitle">" Formidable "</h2>
+                        <p class="content_advice_yoan">J'ai pu découvrir Paris grâce au circuit culturel d'Inside City. Nous sommes partis en couple pour un week-end et notre voyage fût formidable. Que de bons souvenirs !</p>
+                </div>
+                <img class="tab_img_paris" src="{{ asset('assets/img/villes/paris1.jpg') }}" alt="Paris">
+            </div>
+            <div class="tab_img2">
+                <div class="advice_corinne">
+                    <div class="title_corinne">
+                        <h1 class="name">Corinne F.</h1>
+                        <img class="round_img_corinne" src="{{ asset('assets/img/profils/corinne.jpg') }}" alt="Corinne">
+                    </div>
+                        <h2 class="subtitle">" Séjour inoubliable ! "</h2>
+                        <p class="content_advice_corinne">C'était la première fois pour nous à Amsterdam. Grâce au circuit gastronomique proposé par Inside City, nous avons pu apprécier Amsterdam à sa juste valeur. Séjour inoubliable !</p>
+                </div>
+                <img class="tab_img_amsterdam" src="{{ asset('assets/img/villes/amsterdam.jpg') }}" alt="Amsterdam">
+            </div>
+            <div class="tab_img3">
+                <div class="advice_victor">
+                    <div class="title_victor">
+                        <h1 class="name">Victor G.</h1>
+                        <img class="round_img_victor" src="{{ asset('assets/img/profils/victor.jpg') }}" alt="Victor">
+                    </div>
+                        <h2 class="subtitle">" Fantastique ! "</h2>
+                        <p class="content_advice_victor">Je suis parti 3 jours à Prague et c'était vraiment fantastique. J'ai choisi le circuit sportif et les activités étaient vraiment top. J'espère découvrir d'autres pays avec Inside City.</p>
+                </div>
+                <img class="tab_img_prague" src="{{ asset('assets/img/villes/prague.jpg') }}" alt="Prague">
+            </div>
+            <div class="content_step">
+                <div class="step">
+                <a href="{{ path('fos_user_security_login') }}">
+                    <img class="img_step" src="{{ asset('assets/img/icones/log.png') }}" alt="log in">
+                    <p class="text_step" href="">Inscrivez-vous <br> ou connectez-vous</p>
+                </a>
+                </div>
+                <div class="step">
+                    <img class="img_step" src="{{ asset('assets/img/icones/ckeck.png') }}" alt="ckeck">
+                    <p class="text_step" href="">Choisissez votre <br> destination et votre circuit</p>
+                </div>
+                <div class="step">
+                    <img class="img_step" src="{{ asset('assets/img/icones/arobase.png') }}" alt="arobase">
+                    <p class="text_step" href="">Recevez votre <br> circuit par mail</p>
+                </div>
+                <div class="step">
+                    <img class="img_step" src="{{ asset('assets/img/icones/valise.png') }}" alt="valise">
+                    <p class="text_step" href="">Voyagez, <br> découvrez et profitez</p>
+                </div>
+                <div class="step">
+                    <img class="img_step" src="{{ asset('assets/img/icones/share.png') }}" alt="share">
+                    <p class="text_step" href="">Partagez votre expérience <br> sur la destination</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

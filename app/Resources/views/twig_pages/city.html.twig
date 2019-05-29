@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% for city in cities %}
+    <div id="bas">
+        <div class="city">
+            <h1 class="title">{{ city.name }}</h1>
+            <a href="{{ path("circuit", {'id' : city.id})}}">
+               <img class="img_city" src="{{ asset(city_dir ~ city.image ) }}" alt="">
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

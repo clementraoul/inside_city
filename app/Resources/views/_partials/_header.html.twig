@@ -1,0 +1,41 @@
+<div class="grand-menu">
+    <div class="menu">
+        <p class="logo">Inside City</p>
+        <a class="button" href="{{ path("home") }}">Accueil</a>
+        <div class="dropdown">
+            <button class="dropbtn">Destinations</button>
+            <div class="dropdown-content">
+                <a class ="child" href="#">Afrique</a>
+                <a class ="child" href="#">Amérique du Nord</a>
+                <a class ="child" href="#">Amérique du Sud</a>
+                <a class ="child" href="#">Asie</a>
+                <a class ="child" href="{{ path("city") }}">Europe</a>
+                <a class ="child" href="#">Océanie</a>
+            </div>
+        </div>
+        <a class="button" href="">Expériences</a>
+        <a class="button" href="">Contact</a>
+        {% if app.user %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="button" href="{{ path("admin_home") }}">{{ app.user.username }}</a>
+        {% else %}
+            <a class="button" href="{{ path("home") }}">{{ app.user.username }}</a>
+        {% endif %}
+            <a class="button" href="{{ path("fos_user_security_logout") }}">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        {% else %}
+            <a class="button" href="{{ path("fos_user_security_login") }}">Se connecter</a>
+    {% endif %}
+    </div>
+    <div class="intro">
+        <p>{{ (texte is defined) ? texte : 'Bienvenue sur Inside City' }}</p>
+        <a href="#bas">
+        <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </a>
+    </div>
+</div>

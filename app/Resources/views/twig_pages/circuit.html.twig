@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+{% block content %}
+  <div id="bas">
+  {% for circuit in circuits %}
+    <div class="circuit">
+        <h1 class="title">{{ circuit.title }}</h1>
+        <h2>Description</h2>
+        <p class="description">{{ circuit.description}}</p>
+        <h2>Activité 1</h2>
+        <p class="act">{{ circuit.act1}}</p>
+        <h2>Activité 2</h2>
+        <p class="act">{{ circuit.act2}}</p>
+        <h2>Activité 3</h2>
+        <p class="act">{{ circuit.act3}}</p>
+        <h2>Activité 4</h2>
+        <p class="act">{{ circuit.act4}}</p>
+        <h2>Activité 5</h2>
+        <p class="act">{{ circuit.act5}}</p>
+        <h2>Durée</h2>
+        <p class="duration">{{circuit.duration}}</p>
+        <h2>Distance</h2>
+        <p class="distance">{{circuit.distance}}</p>
+        <h2>Prix</h2>
+        <p class="price">{{circuit.price}}</p>
+        {% if app.user %}
+          <a class="validate" href="{{ path('envoieMessage',{'ledoc': circuit.document })}}"><p>Valider</p></a>
+        {% else %}
+            <a class="validate" href="{{ path("fos_user_security_login") }}">Se connecter</a>
+        {% endif %}
+    </div>
+    {% else %}
+    <div class="circuit">
+    <p class="title">Aucun circuit trouvé</p>
+    </div>
+    {% endfor %}
+  </div> 
+{% endblock %}

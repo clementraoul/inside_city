@@ -1,0 +1,14 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block content %}
+    {{ form_start(formCreateDestination) }}
+        <div class="form-destination">
+            <div class="form-group">
+                {{ form_label(formCreateDestination.name) }}
+                {{ form_errors(formCreateDestination.name) }}
+                {{ form_widget(formCreateDestination.name) }}
+            </div>
+        </div>
+    {{ form_end(formCreateDestination) }}
+{% endblock %}
+
+    

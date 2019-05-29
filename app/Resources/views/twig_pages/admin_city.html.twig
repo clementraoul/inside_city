@@ -1,0 +1,20 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block content %}
+    <a class="add" href="{{ path('form_create_city') }}">
+        <p class="add">Ajouter une ville</p> 
+    </a>
+        {% for city in cities %}
+            <div class="city">
+                <h1 class="title">{{ city.name }}</h1>
+                <a href="{{ path('circuit', {'id' : city.id})}}">
+                    <img class="img_city" src="{{ asset(city_dir ~ city.image ) }}" alt="">
+                </a>
+                <a class="delete" href="{{ path('delete_city', {'id' : city.id})}}">
+                Supprimer 
+                </a>
+                <a class="update" href="{{ path('update_form_city', {'id' : city.id})}}">
+                Modifier
+                </a>
+            </div>
+        {% endfor %}
+{% endblock %}

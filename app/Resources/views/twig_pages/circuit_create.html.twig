@@ -1,0 +1,69 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block content %}
+    {{ form_start(formCreateCircuit) }}
+        <div class="form-city">
+        <div class="form-group">
+                {{ form_label(formCreateCircuit.cities) }}
+                {{ form_errors(formCreateCircuit.cities) }}
+                {{ form_widget(formCreateCircuit.cities) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.title) }}
+                {{ form_errors(formCreateCircuit.title) }}
+                {{ form_widget(formCreateCircuit.title) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.description) }}
+                {{ form_errors(formCreateCircuit.description) }}
+                {{ form_widget(formCreateCircuit.description) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.act1) }}
+                {{ form_errors(formCreateCircuit.act1) }}
+                {{ form_widget(formCreateCircuit.act1) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.act2) }}
+                {{ form_errors(formCreateCircuit.act2) }}
+                {{ form_widget(formCreateCircuit.act2) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.act3) }}
+                {{ form_errors(formCreateCircuit.act3) }}
+                {{ form_widget(formCreateCircuit.act3) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.act4) }}
+                {{ form_errors(formCreateCircuit.act4) }}
+                {{ form_widget(formCreateCircuit.act4) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.act5) }}
+                {{ form_errors(formCreateCircuit.act5) }}
+                {{ form_widget(formCreateCircuit.act5) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.duration) }}
+                {{ form_errors(formCreateCircuit.duration) }}
+                {{ form_widget(formCreateCircuit.duration) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.distance) }}
+                {{ form_errors(formCreateCircuit.distance) }}
+                {{ form_widget(formCreateCircuit.distance) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.price) }}
+                {{ form_errors(formCreateCircuit.price) }}
+                {{ form_widget(formCreateCircuit.price) }}
+                <p class="comment_stars">1 étoile = bon marché - 5 étoiles = très cher</p>
+            </div>
+            <div class="form-group">
+                {{ form_label(formCreateCircuit.document) }}
+                {{ form_errors(formCreateCircuit.document) }}
+                {{ form_widget(formCreateCircuit.document) }}
+            </div>
+        </div>
+    {{ form_end(formCreateCircuit) }}
+{% endblock %}
